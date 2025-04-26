@@ -7,7 +7,6 @@ brew "e2fsprogs", link: true
 brew "git"
 brew "git-lfs"
 brew "gnu-sed"
-brew "hping"
 brew "lrzsz"
 brew "neovim"
 brew "nvm"
