@@ -1,0 +1,1 @@
+alias tgo=terragrunt --terragrunt-tfpath tofu
