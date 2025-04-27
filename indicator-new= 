@@ -1,0 +1,92 @@
+diff --git a/.gitconfig b/.gitconfig
+deleted file mode 100644
+index 4a3f1be..0000000
+--- a/.gitconfig
++++ /dev/null
+@@ -1,9 +0,0 @@
+ [user]
+ name = Joey
+ email = 3282127+jlai403@users.noreply.github.com
+ 
+ [alias]
+ co = checkout
+ ci = commit
+ br = branch
+ st = status
+\ No newline at end of file
+diff --git a/Brewfile b/Brewfile
+index 8240337..9a368ff 100644
+--- a/Brewfile
++++ b/Brewfile
+@@ -2,6 +2,7 @@ tap "1password/tap"
+ tap "hashicorp/tap"
+ brew "aws-vault"
+ brew "awscli", link: false
++brew "diff-so-fancy"
+ brew "docker-compose", link: false
+ brew "e2fsprogs", link: true
+ brew "git"
+@@ -19,6 +20,7 @@ brew "starship"
+ brew "telnet"
+ brew "terragrunt"
+ brew "tmux"
++cask "1password"
+ cask "1password-cli"
+ cask "font-jetbrains-mono-nerd-font"
+ cask "ollama"
+diff --git a/main.zsh b/main.zsh
+index 47598ed..abd1782 100755
+--- a/main.zsh
++++ b/main.zsh
+@@ -42,8 +42,14 @@ fi
+ # update dotfiles via symlinks
+ #################################
+ 
+ # neovim symlink script
+ mkdir -p ~/.config
++
++# git symlink script
++rm -rf ~/.config/git
++ln -s "$(pwd)/git" ~/.config/git
++echo "${GREEN}Symlink updated for $(pwd)/git -> ~/.config/git ${NC}"
++
++# neovim symlink script
+ rm -rf ~/.config/nvim  # Remove existing symlink or directory
+ ln -s "$(pwd)/nvim" ~/.config/nvim
+ echo "${GREEN}Symlink updated for $(pwd)/nvim -> ~/.config/nvim ${NC}"
+diff --git a/tmux/tmux.conf b/tmux/tmux.conf
+index 038def3..8d87f72 100644
+--- a/tmux/tmux.conf
++++ b/tmux/tmux.conf
+@@ -1,7 +1,7 @@
+ # Unbind the default Ctrl+b to Ctrl+s
++# Unbind the default Ctrl+b to Ctrl+Space
+ unbind C-b
+ set-option -g prefix C-s
+ bind-key C-s send-prefix
++set-option -g prefix C-Space
++bind-key C-Space send-prefix
+ 
+ # reload tmux config
+ bind r source-file ~/.tmux.conf
+diff --git a/zsh/aliases.zsh b/zsh/aliases.zsh
+index 1bc5905..7ac9a88 100644
+--- a/zsh/aliases.zsh
++++ b/zsh/aliases.zsh
+@@ -1,2 +1,16 @@
+ alias tgo=terragrunt --terragrunt-tfpath tofu
+ alias cleartf='rm -rf .terraform* .terragrunt-cache'
++
++# git aliases
++alias gi='git init'
++alias gcl='git clone'
++alias gco='git checkout'
++alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
++alias ga='git add'
++alias gs='git status'
++alias gc='git commit'
++alias gp='git push'
++alias gu='git pull'
++alias gl="git log --all --graph --pretty=\
++	format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n'"
++alias gb='git branch'

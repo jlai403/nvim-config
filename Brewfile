@@ -2,6 +2,7 @@ tap "1password/tap"
 tap "hashicorp/tap"
 brew "aws-vault"
 brew "awscli", link: false
+brew "diff-so-fancy"
 brew "docker-compose", link: false
 brew "e2fsprogs", link: true
 brew "git"
@@ -19,6 +20,7 @@ brew "starship"
 brew "telnet"
 brew "terragrunt"
 brew "tmux"
+cask "1password"
 cask "1password-cli"
 cask "font-jetbrains-mono-nerd-font"
 cask "ollama"

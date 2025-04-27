@@ -42,8 +42,14 @@ fi
 # update dotfiles via symlinks
 #################################
 
-# neovim symlink script
 mkdir -p ~/.config
+
+# git symlink script
+rm -rf ~/.config/git
+ln -s "$(pwd)/git" ~/.config/git
+echo "${GREEN}Symlink updated for $(pwd)/git -> ~/.config/git ${NC}"
+
+# neovim symlink script
 rm -rf ~/.config/nvim  # Remove existing symlink or directory
 ln -s "$(pwd)/nvim" ~/.config/nvim
 echo "${GREEN}Symlink updated for $(pwd)/nvim -> ~/.config/nvim ${NC}"
