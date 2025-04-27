@@ -5,7 +5,7 @@
 [url "ssh://git@github.com"]
 	insteadOf = "gh:"
 
-[url "ssh://git@github.com:jlai403/"]
+[url "ssh://git@github.com/jlai403/"]
 	insteadOf = "ghjlai:"
 
 [url "ssh://git@github.com/stellaralgo/"]
