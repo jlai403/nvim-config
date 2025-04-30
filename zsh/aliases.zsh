@@ -19,4 +19,4 @@ alias gb='git branch'
 alias av=aws-vault
 alias tgo=terragrunt --terragrunt-tfpath tofu
 alias cleartf='rm -rf .terraform* .terragrunt-cache'
-alias svenv=source .venv/bin/activate
+alias svenv='source .venv/bin/activate'
