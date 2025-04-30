@@ -16,6 +16,7 @@ alias gl="git log --all --graph --pretty=\
 alias gb='git branch'
 
 # dev
+alias av=aws-vault
 alias tgo=terragrunt --terragrunt-tfpath tofu
 alias cleartf='rm -rf .terraform* .terragrunt-cache'
 alias svenv=source .venv/bin/activate
