@@ -93,3 +93,5 @@ tmux source-file ~/.tmux.conf
 
 # enable press and hold for special characters in VSCode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+# reduce motion when switching desktops
+defaults write com.apple.universalaccess reduceMotion -bool true && killall Dock
