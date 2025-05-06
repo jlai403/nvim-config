@@ -4,6 +4,7 @@ tap "homebrew/bundle"
 brew "aws-vault"
 brew "awscli", link: false
 brew "azure-cli"
+brew "deno"
 brew "diff-so-fancy"
 brew "docker-compose", link: false
 brew "dotnet", link: false
