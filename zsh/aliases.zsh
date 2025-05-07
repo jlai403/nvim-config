@@ -17,7 +17,7 @@ alias gb='git branch'
 
 # dev
 function av() {
-  aws-vault exec "$1" -- zsh -i
+	aws-vault exec "$1" -- zsh -i
 }
 
 alias tgo=terragrunt --terragrunt-tfpath tofu

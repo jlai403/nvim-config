@@ -60,8 +60,3 @@ keymap({"n", "v"}, "<leader>rt", "<cmd>lua require('vscode').action('testing.run
 keymap({"n", "v"}, "<leader>ra", "<cmd>lua require('vscode').action('testing.runAll')<CR>")
 keymap({"n", "v"}, "<leader>rd", "<cmd>lua require('vscode').action('testing.debugAtCursor')<CR>")
 keymap({"n", "v"}, "<leader>tr", "<cmd>lua require('vscode').action('workbench.panel.testResults.view.focus')<CR>")
-
--- keymaps for coding
-keymap("n", "<leader>cl", "oconsole.log();<Left><Left>")
-keymap("n", "<leader>nl", "o<ESC>")
-keymap("n", "<leader>nla", "O<ESC>")
