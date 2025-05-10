@@ -1,6 +1,5 @@
 tap "1password/tap"
 tap "hashicorp/tap"
-tap "homebrew/bundle"
 brew "aws-vault"
 brew "awscli", link: false
 brew "azure-cli"
