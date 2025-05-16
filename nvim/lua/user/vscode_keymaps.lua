@@ -1,11 +1,6 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
--- remap leader key
-keymap("n", "<Space>", "", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- yank to system clipboard
 keymap({"n", "v"}, "<leader>c", '"+y', opts)
 -- paste from system clipboard
