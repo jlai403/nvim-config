@@ -20,8 +20,8 @@ function av() {
 }
 
 # terragrunt
-alias tgt='TERRAGRUNT_TFPATH=$(which terraform) terragrunt'
-alias tgo='TERRAGRUNT_TFPATH=$(which tofu) terragrunt'
+alias tgt='TG_TF_PATH=$(which terraform) terragrunt'
+alias tgo='TG_TF_PATH=$(which tofu) terragrunt'
 alias cleartf='rm -rf .terraform* .terragrunt-cache'
 
 # python
