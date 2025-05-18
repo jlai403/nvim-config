@@ -20,6 +20,7 @@ function av() {
 }
 
 # terragrunt
+alias tgf='terragrunt hcl format && terraform fmt --recursive'
 alias tgt='TG_TF_PATH=$(which terraform) terragrunt'
 alias tgo='TG_TF_PATH=$(which tofu) terragrunt'
 alias cleartf='rm -rf .terraform* .terragrunt-cache'
