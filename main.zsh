@@ -67,6 +67,16 @@ else
   echo "${YELLOW}Starship prompt already in ~/.zshrc ${NC}"
 fi
 
+if ! grep -q 'eval "$(zoxide init zsh)"' ~/.zshrc; then
+  echo '
+# Load starship prompt
+eval "$(zoxide init zsh)"
+' >> ~/.zshrc
+  echo "${GREEN}Added zoxide to ~/.zshrc ${NC}"
+else
+  echo "${YELLOW}zoxide already in ~/.zshrc ${NC}"
+fi
+
 #################################
 # update dotfiles via symlinks
 #################################
